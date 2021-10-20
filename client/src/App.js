@@ -21,6 +21,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+// Creating a client object to use with the ApolloProvider to make every request work with the Apollo server
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
@@ -28,6 +29,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
+    <ApolloProvider client={client}>
     <Router>
       <>
         <Navbar />
@@ -38,6 +40,7 @@ function App() {
         </Switch>
       </>
     </Router>
+    </ApolloProvider>
   );
 }
 
