@@ -15,7 +15,7 @@
 * [Questions](#questions)
 
 ## Installation
-1: Clone the repository from Github<br />2:  Run NPM Install to install the modules<br />3:  Run "npm run develop" to start the server<br />4:  Access the website at http://localhost:3000/ or <br />
+1: Clone the repository from Github<br />2:  Run NPM Install to install the modules<br />3:  Run "npm run develop" to start the server<br />4:  Access the website at http://localhost:3000/ or https://aqueous-oasis-57741.herokuapp.com/<br />
 
 ## Usage
 
@@ -29,7 +29,7 @@ https://opensource.org/licenses/MPL-2.0 <br />
 Licensed under Mozilla Public License 2.0
 
 ## Deployment
-Heroku: 
+Heroku: https://aqueous-oasis-57741.herokuapp.com/
 
 ## Questions
 https://github.com/askarrizvi <br />
