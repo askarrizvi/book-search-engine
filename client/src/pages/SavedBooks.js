@@ -11,11 +11,13 @@ import { REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
   // Use useQuery and useMutation from apollo for the query and mutation we defined
-  const { loading, getMeError, userData } = useQuery(GET_ME);
+  let { loading, data: userData } = useQuery(GET_ME);
   const [removeBook, { RemoveError }] = useMutation(REMOVE_BOOK);
 
+  userData = userData?.me;
+
   // use this to determine if Loading should be displayed
-  const userDataLength = Object.keys(userData).length;
+  //const userDataLength = Object.keys(userData).length;
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
@@ -43,7 +45,7 @@ const SavedBooks = () => {
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
 
